@@ -9,6 +9,9 @@ import androidx.navigation.ui.navigateUp
 import androidx.navigation.ui.setupActionBarWithNavController
 import android.view.Menu
 import android.view.MenuItem
+import androidx.core.view.isVisible
+import androidx.navigation.NavController
+import androidx.navigation.NavDestination
 import com.learning.formfilling.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
@@ -30,6 +33,20 @@ class MainActivity : AppCompatActivity() {
 
         binding.fab.setOnClickListener { view ->
            navController.navigate(R.id.action_FirstFragment_to_SecondFragment)
+        }
+
+        navController.addOnDestinationChangedListener { _, destination, _ ->
+            when (destination.id) {
+                R.id.FirstFragment -> {
+                    binding.fab.isVisible = true
+                }
+                R.id.SecondFragment -> {
+                    binding.fab.isVisible = false
+                }
+                else -> {
+                    binding.fab.isVisible = false
+                }
+            }
         }
     }
 

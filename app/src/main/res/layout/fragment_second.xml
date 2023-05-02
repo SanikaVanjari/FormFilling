@@ -121,4 +121,14 @@
             android:inputType="number"
             android:maxLength="6" />
     </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/saveBT"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_20dp"
+        app:layout_constraintTop_toBottomOf="@id/pincodeTil"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="@string/save_details"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

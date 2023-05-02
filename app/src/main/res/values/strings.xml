@@ -16,4 +16,5 @@
     <string name="enter_state_name">Enter State Name</string>
     <string name="enter_country_name">Enter Country Name</string>
     <string name="enter_pincode_name">Enter Pincode Name</string>
+    <string name="save_details">Save Details</string>
 </resources>
